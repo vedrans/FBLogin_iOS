@@ -40,11 +40,18 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (result.token) != nil
         {
-            //Get user access token
-            let token:FBSDKAccessToken = result.token
+        
+            print("Token = \(FBSDKAccessToken.currentAccessToken().tokenString)")
             
-            print("Token = " + token.tokenString)
-            print("User ID = " + token.userID)
+            print("User ID = \(FBSDKAccessToken.currentAccessToken().userID)")
+            
+            let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
+            
+            let protectedPageNav = UINavigationController(rootViewController: protectedPage)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDelegate.window?.rootViewController = protectedPageNav
             
         }
 
