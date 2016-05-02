@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Sh-Z5-Nk3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,63 +17,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_login.png" translatesAutoresizingMaskIntoConstraints="NO" id="dNa-gH-DIL">
-                                <rect key="frame" x="40" y="213" width="240" height="53"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-PG-5TA" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="40" y="215" width="240" height="50"/>
+                                <color key="backgroundColor" red="0.28033426530597128" green="0.4718362003373584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="3jV-Uq-bcm"/>
-                                    <constraint firstAttribute="height" constant="53" id="7oc-Ba-Cyd"/>
+                                    <constraint firstAttribute="height" constant="50" id="ILD-6B-G4d"/>
+                                    <constraint firstAttribute="width" constant="240" id="gmv-3N-mxr"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dNa-gH-DIL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qTE-EH-KnL"/>
-                            <constraint firstItem="dNa-gH-DIL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQA-Kl-cQo"/>
+                            <constraint firstItem="oR3-PG-5TA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wc-8Z-M2f"/>
+                            <constraint firstItem="oR3-PG-5TA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fGY-h6-VMg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login View" id="T6W-63-cdv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="oR3-PG-5TA" id="2mw-Uc-V9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="387"/>
+            <point key="canvasLocation" x="1168" y="387"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="NkG-4C-zto">
+        <!--Protected Page-->
+        <scene sceneID="DwI-MX-bEM">
             <objects>
-                <viewController id="Tz4-Cs-mif" sceneMemberID="viewController">
+                <viewController id="Oqa-5m-gCj" customClass="ProtectedPageViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zf2-sI-APA"/>
-                        <viewControllerLayoutGuide type="bottom" id="9SV-u3-29e"/>
+                        <viewControllerLayoutGuide type="top" id="KV7-aW-Wza"/>
+                        <viewControllerLayoutGuide type="bottom" id="yH1-6L-jvJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qhg-Gg-Y8H">
+                    <view key="view" contentMode="scaleToFill" id="Q2x-es-lNn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-BP-mLa">
-                                <rect key="frame" x="125" y="28" width="70" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="NIf-ml-I4M"/>
-                                    <constraint firstAttribute="height" constant="21" id="x4f-zf-Lmh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5nx-BP-mLa" firstAttribute="centerX" secondItem="qhg-Gg-Y8H" secondAttribute="centerX" id="42A-9k-BNs"/>
-                            <constraint firstItem="5nx-BP-mLa" firstAttribute="top" secondItem="zf2-sI-APA" secondAttribute="bottom" constant="8" id="U4y-gp-yX3"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Protected Page" id="qlE-rw-DtT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8jA-I9-TmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eT-kj-gpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="387"/>
+            <point key="canvasLocation" x="1168" y="964"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cd4-e3-vRE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Sh-Z5-Nk3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RzO-w3-vCa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5pt-bd-9c0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu0-fY-jxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BeA-KN-kgo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x65-OC-j7H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLQ-W5-ieF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oqa-5m-gCj" kind="relationship" relationship="rootViewController" id="7PI-lU-jvG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3L4-y1-3pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="964"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="fb_login.png" width="230" height="52"/>
-    </resources>
 </document>

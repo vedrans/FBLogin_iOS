@@ -13,6 +13,7 @@
 		0B4B02FE1CD7C43500595B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B02FD1CD7C43500595B4E /* Assets.xcassets */; };
 		0B4B03011CD7C43500595B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B02FF1CD7C43500595B4E /* LaunchScreen.storyboard */; };
 		0B4B030B1CD7C4F200595B4E /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B030A1CD7C4F200595B4E /* fb_login.png */; };
+		0B75809B1CD7DC9C006775A6 /* ProtectedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B75809A1CD7DC9C006775A6 /* ProtectedPageViewController.swift */; };
 		AE5FC49913D3B186F7FBA46C /* Pods_FBLogin_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F431E09AA8A7C9966238DE7 /* Pods_FBLogin_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		0B4B03021CD7C43500595B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4B030A1CD7C4F200595B4E /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_login.png; sourceTree = "<group>"; };
 		0B7580991CD7C69C006775A6 /* FBLogin-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLogin-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B75809A1CD7DC9C006775A6 /* ProtectedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtectedPageViewController.swift; sourceTree = "<group>"; };
 		2D759B9A83C0181DD2CB0767 /* Pods-FBLogin-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBLogin-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBLogin-iOS/Pods-FBLogin-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7F431E09AA8A7C9966238DE7 /* Pods_FBLogin_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBLogin_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BFDA82A085EAF185EE23CD /* Pods-FBLogin-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBLogin-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBLogin-iOS/Pods-FBLogin-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				0B4B02F61CD7C43500595B4E /* AppDelegate.swift */,
 				0B4B02F81CD7C43500595B4E /* ViewController.swift */,
+				0B75809A1CD7DC9C006775A6 /* ProtectedPageViewController.swift */,
 				0B4B02FA1CD7C43500595B4E /* Main.storyboard */,
 				0B4B02FD1CD7C43500595B4E /* Assets.xcassets */,
 				0B4B02FF1CD7C43500595B4E /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4B02F91CD7C43500595B4E /* ViewController.swift in Sources */,
+				0B75809B1CD7DC9C006775A6 /* ProtectedPageViewController.swift in Sources */,
 				0B4B02F71CD7C43500595B4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
