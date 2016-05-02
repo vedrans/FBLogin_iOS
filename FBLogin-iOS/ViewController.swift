@@ -16,12 +16,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if (FBSDKAccessToken.currentAccessToken() == nil ) {
-            print("User is not logged in")
-        } else {
-            print("User is logged in")
-        }
-        
         loginBtn.delegate = self
         loginBtn.readPermissions = ["public_profile", "email"]
     }
@@ -29,6 +23,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        goToProtectedPage()
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!){
@@ -45,16 +45,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             print("User ID = \(FBSDKAccessToken.currentAccessToken().userID)")
             
-            let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
-            
-            let protectedPageNav = UINavigationController(rootViewController: protectedPage)
-            
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            
-            appDelegate.window?.rootViewController = protectedPageNav
+            goToProtectedPage()
             
         }
 
+    }
+    
+    func goToProtectedPage() {
+        let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
+        
+        let protectedPageNav = UINavigationController(rootViewController: protectedPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = protectedPageNav
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
