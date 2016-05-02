@@ -12,6 +12,7 @@
 		0B4B02FC1CD7C43500595B4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B02FA1CD7C43500595B4E /* Main.storyboard */; };
 		0B4B02FE1CD7C43500595B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B02FD1CD7C43500595B4E /* Assets.xcassets */; };
 		0B4B03011CD7C43500595B4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B02FF1CD7C43500595B4E /* LaunchScreen.storyboard */; };
+		0B4B030B1CD7C4F200595B4E /* fb_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B030A1CD7C4F200595B4E /* fb_login.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0B4B02FD1CD7C43500595B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B4B03001CD7C43500595B4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4B03021CD7C43500595B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B4B030A1CD7C4F200595B4E /* fb_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_login.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,25 @@
 				0B4B02FD1CD7C43500595B4E /* Assets.xcassets */,
 				0B4B02FF1CD7C43500595B4E /* LaunchScreen.storyboard */,
 				0B4B03021CD7C43500595B4E /* Info.plist */,
+				0B4B03081CD7C4AE00595B4E /* resources */,
 			);
 			path = "FBLogin-iOS";
+			sourceTree = "<group>";
+		};
+		0B4B03081CD7C4AE00595B4E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B4B03091CD7C4C400595B4E /* images */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		0B4B03091CD7C4C400595B4E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0B4B030A1CD7C4F200595B4E /* fb_login.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +143,7 @@
 				0B4B03011CD7C43500595B4E /* LaunchScreen.storyboard in Resources */,
 				0B4B02FE1CD7C43500595B4E /* Assets.xcassets in Resources */,
 				0B4B02FC1CD7C43500595B4E /* Main.storyboard in Resources */,
+				0B4B030B1CD7C4F200595B4E /* fb_login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
