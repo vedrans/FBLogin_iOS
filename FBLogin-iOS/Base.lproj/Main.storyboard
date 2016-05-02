@@ -53,10 +53,29 @@
                     <view key="view" contentMode="scaleToFill" id="Q2x-es-lNn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yy-kn-Auv" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="40" y="215" width="240" height="50"/>
+                                <color key="backgroundColor" red="0.2803342653" green="0.47183620030000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QrP-5S-vg6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Xwm-WD-eeU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="cnF-al-sbY"/>
+                                    <constraint firstAttribute="height" constant="50" id="rQx-Wy-uaC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Yy-kn-Auv" firstAttribute="centerX" secondItem="Q2x-es-lNn" secondAttribute="centerX" id="6fX-vk-Gyl"/>
+                            <constraint firstItem="9Yy-kn-Auv" firstAttribute="centerY" secondItem="Q2x-es-lNn" secondAttribute="centerY" id="Rqc-OP-Vnb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Protected Page" id="qlE-rw-DtT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="logoutBtn" destination="9Yy-kn-Auv" id="lKb-l1-XvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eT-kj-gpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

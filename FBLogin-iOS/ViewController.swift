@@ -53,6 +53,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     }
     
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("user did log out")
+    }
+    
+    
     func goToProtectedPage() {
         let protectedPage = self.storyboard?.instantiateViewControllerWithIdentifier("ProtectedPageViewController") as! ProtectedPageViewController
         
@@ -62,12 +67,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         appDelegate.window?.rootViewController = protectedPageNav
     }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("user did log out")
-    }
-
-
 
 }
 
