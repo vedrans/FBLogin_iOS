@@ -33,6 +33,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!){
         
+        if error != nil {
+            print(error.localizedDescription)
+            return
+        }
+        
+        if (result.token) != nil
+        {
+            //Get user access token
+            let token:FBSDKAccessToken = result.token
+            
+            print("Token = " + token.tokenString)
+            print("User ID = " + token.userID)
+            
+        }
+
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {

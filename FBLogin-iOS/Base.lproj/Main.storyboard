@@ -8,7 +8,7 @@
         <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,7 +45,7 @@
         <!--Protected Page-->
         <scene sceneID="DwI-MX-bEM">
             <objects>
-                <viewController id="Oqa-5m-gCj" customClass="ProtectedPageViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProtectedPageViewController" id="Oqa-5m-gCj" customClass="ProtectedPageViewController" customModule="FBLogin_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KV7-aW-Wza"/>
                         <viewControllerLayoutGuide type="bottom" id="yH1-6L-jvJ"/>
