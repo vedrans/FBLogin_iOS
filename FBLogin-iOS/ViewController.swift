@@ -27,8 +27,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        goToProtectedPage()
+
+        if (FBSDKAccessToken.currentAccessToken() != nil ) {
+            goToProtectedPage()
+        }
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!){

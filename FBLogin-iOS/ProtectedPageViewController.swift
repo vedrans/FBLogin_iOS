@@ -18,6 +18,24 @@ class ProtectedPageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+  
+        if (FBSDKAccessToken.currentAccessToken() == nil ) {
+            goToLoginPage()
+        }
+    }
+    
+    func goToLoginPage() {
+        let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        
+        let loginPageNav = UINavigationController(rootViewController: loginPage)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = loginPageNav
+    }
 
 
 }
