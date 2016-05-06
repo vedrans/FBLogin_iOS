@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View-->
@@ -64,17 +65,43 @@
                                     <constraint firstAttribute="height" constant="50" id="rQx-Wy-uaC"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-jN-wHX">
+                                <rect key="frame" x="16" y="107" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UO1-Vw-q5O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCR-0S-kha">
+                                <rect key="frame" x="16" y="146" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GW9-HC-j1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Yy-kn-Auv" firstAttribute="centerX" secondItem="Q2x-es-lNn" secondAttribute="centerX" id="6fX-vk-Gyl"/>
+                            <constraint firstItem="4hd-jN-wHX" firstAttribute="top" secondItem="KV7-aW-Wza" secondAttribute="bottom" constant="43" id="Aid-un-xe2"/>
+                            <constraint firstItem="sCR-0S-kha" firstAttribute="trailing" secondItem="Q2x-es-lNn" secondAttribute="trailingMargin" id="CWc-1h-w48"/>
+                            <constraint firstItem="4hd-jN-wHX" firstAttribute="trailing" secondItem="Q2x-es-lNn" secondAttribute="trailingMargin" id="Q9O-TN-8eo"/>
                             <constraint firstItem="9Yy-kn-Auv" firstAttribute="centerY" secondItem="Q2x-es-lNn" secondAttribute="centerY" id="Rqc-OP-Vnb"/>
+                            <constraint firstItem="sCR-0S-kha" firstAttribute="leading" secondItem="Q2x-es-lNn" secondAttribute="leadingMargin" id="SiC-vP-SkU"/>
+                            <constraint firstItem="sCR-0S-kha" firstAttribute="top" secondItem="4hd-jN-wHX" secondAttribute="bottom" constant="18" id="hqv-b5-pBb"/>
+                            <constraint firstItem="4hd-jN-wHX" firstAttribute="leading" secondItem="Q2x-es-lNn" secondAttribute="leadingMargin" id="mN4-mP-dEb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Protected Page" id="qlE-rw-DtT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="logoutBtn" destination="9Yy-kn-Auv" id="lKb-l1-XvO"/>
+                        <outlet property="userId" destination="4hd-jN-wHX" id="MAo-yr-VDK"/>
+                        <outlet property="userToken" destination="sCR-0S-kha" id="9CI-2a-6Ri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eT-kj-gpb" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,9 +12,14 @@ import FBSDKLoginKit
 class ProtectedPageViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet weak var logoutBtn: FBSDKLoginButton!
+    @IBOutlet weak var userId: UILabel!
+    @IBOutlet weak var userToken: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userId.text = FBSDKAccessToken.currentAccessToken().userID
+        userToken.text = FBSDKAccessToken.currentAccessToken().tokenString
         
         logoutBtn.delegate = self
     }
@@ -22,6 +27,7 @@ class ProtectedPageViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,13 +47,7 @@ class ProtectedPageViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (result.token) != nil
         {
-            
-            print("Token = \(FBSDKAccessToken.currentAccessToken().tokenString)")
-            
-            print("User ID = \(FBSDKAccessToken.currentAccessToken().userID)")
-            
-            // do something
-            
+         
         }
         
     }
